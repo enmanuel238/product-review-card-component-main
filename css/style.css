@@ -1,0 +1,130 @@
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Fraunces', serif;
+}
+html{
+    box-sizing:border box;
+}
+
+*, *:before, *:afer{
+    box-sizing:inherit;
+}
+
+body{
+    font-size: 14px;
+    font-family: var(--primary-font);
+    background-color: var(--cream);
+}
+main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100vw;
+    height:100vh;
+}
+.container{
+    border-radius:15px;
+    overflow: hidden;
+    background-color: var(--white);
+    max-width:390px;
+}
+.card-body{
+    padding: 15px;
+}
+
+h3{
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    font-weight: 400;
+    letter-spacing:3px;
+}
+
+h1{
+    font-family:var(--secondary-font);
+    font-size:40px;
+    line-height:35px;
+    margin: 0px;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.description{
+    color: var(--dark-grayish-blue);
+    line-height:20px;
+}
+
+.price{
+    color:var(--dark-cyan);
+    font-family:var(--secondary-font);
+    font-size: 40px;
+    margin: 0px;
+}
+
+.price span{
+    color: var(--dark-grayish-blue);
+    font-family:var(--primary-font);
+    vertical-align: middle;
+    font-size:14px;
+    margin: 0px;
+    text-decoration:line-through;
+    margin-left:15px;
+}
+
+button{
+    background-color: var(--dark-cyan);
+    border:none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    color:var(--white);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+button:active{
+    background-color: hsl(158, 40%, 18%) ;
+}
+
+.icon-cart{
+    background:url('../images/icon-cart.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+.d-none{
+    display:none;
+}
+
+@media(min-width:768px){
+    .d-md-none{
+        display:none;
+    }
+    .d-md-block{
+        display:block;
+    }
+
+    .container{
+        display:flex;
+        max-width: 600px;
+    }
+    .img-wrapper{
+        width:55%;
+    }
+    .card-body{
+        width:45%;
+    }
+}
